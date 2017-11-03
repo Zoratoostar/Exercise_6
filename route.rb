@@ -5,6 +5,8 @@ class Route
   def initialize(initial_station, final_station)
     if initial_station.class == Station && final_station.class == Station
       @stations = [initial_station, final_station]
+    else
+      raise "instances of class Station must compose the route"
     end
   end
 
